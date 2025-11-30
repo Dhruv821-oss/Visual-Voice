@@ -100,7 +100,7 @@ Trains in seconds on CPU.
 
 🛠️ Installation & Setup
 Clone Repository
-git clone https://github.com/YourUsername/VisualVoice.git
+git clone https://github.com/Dhruv821-oss/Visual-Voice
 cd VisualVoice
 
 Create Virtual Environment
