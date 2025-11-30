@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Gesture – Visual Voice</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <h2>Visual Voice</h2>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/upload">Upload Image</a>
+            <a href="/live">Live Camera</a>
+        </div>
+    </div>
+
+    <div class="upload-container">
+        <h2>Upload Hand Gesture Image</h2>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button class="btn" type="submit">Predict Gesture</button>
+        </form>
+
+        {% if label %}
+            <div class="result-box">
+                <h3>Prediction:</h3>
+                <p class="prediction">{{ label }} ({{ confidence }}%)</p>
+                <img src="{{ image_path }}" class="uploaded-img">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

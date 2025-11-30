@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Gesture Recognition</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/camera.js"></script>
+</head>
+
+<body>
+    <h2>Live Sign Detection</h2>
+<img src="/video_feed" width="500">
+
+    <div class="nav">
+        <h2>Visual Voice</h2>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/upload">Upload Image</a>
+            <a href="/live">Live Camera</a>
+        </div>
+    </div>
+
+    <div class="live-container">
+        <h2>Live Gesture Translator</h2>
+        <video id="video" autoplay playsinline></video>
+
+        <canvas id="canvas" width="300" height="300"></canvas>
+
+        <button class="btn" onclick="captureFrame()">Translate</button>
+
+        <div id="result"></div>
+    </div>
+</body>
+</html>
